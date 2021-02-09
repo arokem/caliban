@@ -678,7 +678,7 @@ def docker_image_id(output: str) -> ImageId:
   on a Docker upgrade.
 
   """
-  return ImageId(output.splitlines()[-1].split()[-1])
+  return ImageId(output.splitlines()[-2].split()[-2])
 
 
 def build_image(job_mode: c.JobMode,
